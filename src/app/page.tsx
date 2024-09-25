@@ -32,7 +32,7 @@ export default function HomePage() {
         </p>
 
         <div className="mt-6 space-x-4">
-          <Link href="/resume" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          <Link href="/resume" className="btn btn-primary ">
             View Resume
           </Link>
         </div>
