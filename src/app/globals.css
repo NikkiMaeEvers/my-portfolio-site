@@ -1,27 +1,22 @@
+/* Import Tailwind's base, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Custom Global Styles */
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Example of setting a global font */
+  background-color: #f8f9fa; /* Light background for the body */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+  color: inherit; /* Inherit text color for links by default */
+  text-decoration: none; /* Remove default link underline */
+}
+
+* {
+  box-sizing: border-box; /* Ensure consistent padding/margin behavior */
 }
