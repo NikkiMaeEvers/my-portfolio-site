@@ -1,12 +1,10 @@
-import React from 'react';
+import ResumeTimeline from '../../components/Resume';
 
-const Resume = () => {
+export default function ResumePage() {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-semibold">My Resume</h1>
-      <p>This is my resume</p>
+    <div className="container mx-auto p-6">
+      <h1 className="text-4xl font-bold mb-10 text-accent">Resume</h1>
+      <ResumeTimeline />
     </div>
   );
-};
-
-export default Resume;
+}

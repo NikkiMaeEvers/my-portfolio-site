@@ -14,7 +14,7 @@ module.exports = {
         newTheme: {
           primary: "#F0B3F7",    // Lilac for primary buttons, links, etc.
           secondary: "#FFC1E3",  // Soft pink for secondary elements
-          accent: "#3D2B56",     // Dark purple for highlights
+          accent: "#601f9e",     // Dark purple for highlights
           neutral: "#333333",    // Dark gray for text
           "base-100": "#FFFFFF", // White for background
           info: "#93C5FD",       // Light blue for informational elements
