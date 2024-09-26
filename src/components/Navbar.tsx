@@ -1,26 +1,36 @@
-import Link from 'next/link';
+'use client'; // Declare this as a Client Component
+import { usePathname } from 'next/navigation'; // Use usePathname from next/navigation
+
 
 const Navbar = () => {
+  const pathname = usePathname(); // Get the current path (App Router compatible)
+
   return (
-    <div className="navbar h-16 bg-base-100 justify-between px-6">
+    <div className="navbar h-16 justify-between px-6">
       {/* NAME / LOGO */}
 
       {/* PAGES */}
-      <ul className="menu menu-horizontal space-x-4">
-        <li className="menu-li">
-        <Link href="/" className="menu-link">Home</Link>
+      <ul className="navbar-start menu menu-horizontal space-x-4">
+        <li className="nav-item">
+        <a href="/" className={`${pathname === '/' ? 'current-link' : 'menu-link'}`}>Home</a>
         </li>
         <li>
-          <Link href="/resume" className="menu-link">Resume</Link>
+          <a href="/resume" className={`${pathname === '/resume' ? 'current-link' : 'menu-link'}`}>Resume</a>
         </li>
         <li>
-          <Link href="/contact" className="menu-link">Contact</Link>
+          <a href="/contact" className={`${pathname === '/contact' ? 'current-link' : 'menu-link'}`}>Contact</a>
         </li>
       </ul>
 
 
+      {/* NAME / LOGO */}
+      <div className="navbar-center">
+        Nikki Mae Evers
+      </div>
+
+
       {/* THEME */}
-            <label className="flex cursor-pointer gap-2">
+      <label className="navbar-end flex cursor-pointer gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"

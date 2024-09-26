@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-base-100 p-6">
       {/* Hero Section */}
       <section className="text-center">
         <h1 className="text-5xl font-bold mb-4">Nikki Mae Evers</h1>
@@ -40,7 +40,7 @@ export default function HomePage() {
 
       {/* Skills Section */}
       <section className="mt-12">
-        <h2 className="text-3xl font-semibold mb-4 text-center">Key Skills</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-center">Experience with</h2>
         <div className="flex flex-wrap justify-center space-x-4">
           <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg">
             Artificial Intelligence

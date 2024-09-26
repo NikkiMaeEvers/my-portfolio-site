@@ -6,21 +6,13 @@
 /* Custom Global Styles */
 html,
 body {
-  height: 100%;
-  margin: 0;
   font-family: 'Inter', sans-serif; /* Example of setting a global font */
-  background-color: #f8f9fa; /* Light background for the body */
 }
 
-a {
-  color: inherit; /* Inherit text color for links by default */
-  text-decoration: none; /* Remove default link underline */
-}
 
-* {
-  box-sizing: border-box; /* Ensure consistent padding/margin behavior */
+.menu li > *:not(ul):not(.menu-title):not(details):active{
+  @apply bg-primary;
 }
-
 
 /* Base button hover effects */
 .btn {
@@ -32,7 +24,6 @@ a {
   @apply hover:bg-transparent hover:font-bold hover:text-primary after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform;
 }
 
-/* Navbar link active state */
-.menu li > *:not(ul):not(.menu-title):not(details):active{
-  @apply bg-primary;
+.current-link {
+  @apply font-bold text-primary after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:scale-x-100;
 }
