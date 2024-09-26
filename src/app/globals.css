@@ -19,6 +19,10 @@ body {
   @apply hover:shadow-lg hover:scale-105 transition-transform duration-200 hover:font-bold;
 }
 
+.btn-ghost {
+  @apply hover:bg-primary
+}
+
 /* Menu link hover effects */
 .menu-link {
   @apply hover:bg-transparent hover:font-bold hover:text-primary after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform;

@@ -7,30 +7,60 @@ const Navbar = () => {
 
   return (
     <div className="navbar h-16 justify-between px-6">
-      {/* NAME / LOGO */}
-
-      {/* PAGES */}
-      <ul className="navbar-start menu menu-horizontal space-x-4">
-        <li className="nav-item">
-        <a href="/" className={`${pathname === '/' ? 'current-link' : 'menu-link'}`}>Home</a>
-        </li>
-        <li>
-          <a href="/resume" className={`${pathname === '/resume' ? 'current-link' : 'menu-link'}`}>Resume</a>
-        </li>
-        <li>
-          <a href="/contact" className={`${pathname === '/contact' ? 'current-link' : 'menu-link'}`}>Contact</a>
-        </li>
-      </ul>
-
-
-      {/* NAME / LOGO */}
-      <div className="navbar-center">
-        Nikki Mae Evers
+      {/* Hamburger Menu for Mobile*/}
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li className="nav-item">
+            <a href="/" className={`${pathname === '/' ? 'current-link' : 'menu-link'}`}>Home</a>
+            </li>
+            <li>
+              <a href="/resume" className={`${pathname === '/resume' ? 'current-link' : 'menu-link'}`}>Resume</a>
+            </li>
+            <li>
+              <a href="/contact" className={`${pathname === '/contact' ? 'current-link' : 'menu-link'}`}>Contact</a>
+            </li>
+          </ul>
+          
+          {/* Logo / Name */}
+          <a className="btn btn-ghost text-xl">Nikki Mae Evers</a>
+        </div>
+        
+        {/* Menu for bigger screens */}
+        <div className='hidden lg:flex'>
+          <ul className="flex menu menu-horizontal space-x-4">
+            <li>
+            <a href="/" className={`${pathname === '/' ? 'current-link' : 'menu-link'}`}>Home</a>
+            </li>
+            <li>
+              <a href="/resume" className={`${pathname === '/resume' ? 'current-link' : 'menu-link'}`}>Resume</a>
+            </li>
+            <li>
+              <a href="/contact" className={`${pathname === '/contact' ? 'current-link' : 'menu-link'}`}>Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
-
       {/* THEME */}
-      <label className="navbar-end flex cursor-pointer gap-2">
+      <div className='navbar-end'>
+        <label className="flex cursor-pointer gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -59,6 +89,7 @@ const Navbar = () => {
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       </label>
+      </div>
     </div>
   );
 };
