@@ -1,3 +1,12 @@
+TODO:
+- Foto aanpassen (te militair nu)
+- Resume: Titel toevoegen, volgorde verbeteren, alles toevoegen
+- Section voor education: 2 kaarten naast elkaar/ of 3 voor ook exchange; kan je op klikken en dan opent het tot een modal met meer info
+- Section voor projecten met kaarten
+- Skills/experiences
+- Interests
+- Contact
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
