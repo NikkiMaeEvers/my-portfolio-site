@@ -16,11 +16,13 @@ module.exports = {
           secondary: "#FFC1E3",  // Soft pink for secondary elements
           accent: "#601f9e",     // Dark purple for highlights
           neutral: "#333333",    // Dark gray for text
-          "base-100": "#FFFFFF", // White for background
+          "base-100": "#fcf5fc", // lightpink for background
+          "base-200": "#f0e6f0", // lightpink grey for background
           info: "#93C5FD",       // Light blue for informational elements
           success: "#36D399",    // Green for success messages
           warning: "#FBBD23",    // Yellow for warning messages
           error: "#F87272",      // Red for error messages
+
         },
       },
       "dark",
@@ -28,7 +30,7 @@ module.exports = {
   },
 };
 
-// {
+// {  
 //   originalTheme: {
 //     primary: "#D6A4D9",    // Lilac for primary buttons, links, etc.
 //     secondary: "#FFC1E3",  // Soft pink for secondary elements

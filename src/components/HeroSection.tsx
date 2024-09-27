@@ -1,54 +1,56 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  return(
-    <div className="hero bg-base-100">
-      <div className="hero-content flex-col lg:flex-row">
-        {/* Left side: Picture */}
-        <div className=''>
-          <Image
-            src="/IMG-20240502-WA0051__01.jpg" // Replace with your image path
-            alt="Image of me"
-            width={922}
-            height={1229}
-            className="rounded-full"
-            sizes='25vw'
-          />
-        </div>
-        
-        {/* <img
-          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-          className="max-w-sm rounded-lg shadow-2xl" /> */}
-
-        {/* Right side: Text and button */}
-        <div className='p-10'>
-          <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold">Nikki Mae Evers</h1>
-          <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            I am a recent graduate with a Master’s degree in Artificial Intelligence. With a solid theoretical foundation, my experience spans from working on data science projects to collaborating on 
-            conversational agents and recommender systems, to teaching.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            I have a deep interest in mental health, psychology, and nutrition, and throughout my studies, including my exchange in Berlin, I 
-            took psychology and neuroscience courses that broadened my understanding of the mind and behaviour. 
-            I enjoy exploring how technology, especially AI, can intersect with mental health, well-being and can aid in creativity.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            I love working on creative and impactful projects, always looking to apply my skills to meaningful challenges. I am a quick learner and love the process of learning and growing.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            In my free time, I enjoy organizing storytelling events, bouldering, and working on personal creative 
-            projects like sewing, painting, and experimenting with fashion and creative makeup.
-          </p>
-
-          <Link href="/resume" className="mt-6 btn btn-primary btn-outline">
-            View Resume
-          </Link>
-        </div>
+  return (
+    <div className="hero h-screen">
+      <div className="hero-content text-left">
+        <motion.div
+          className="max-w-md"
+          initial={{ opacity: 0, y: 50 }} // Start hidden and slightly below
+          animate={{ opacity: 1, y: 0 }}  // Fade in and slide up
+          transition={{ duration: 1.2, ease: "easeOut" }}  // Smooth and slow transition
+        >
+          <motion.p 
+            className="py-6"
+            initial={{ opacity: 0, x: -50 }}  // Fade in and slide from the left
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 1 }}
+          >
+            Hi, I'm
+          </motion.p>
+          
+          <motion.h1 
+            className="text-5xl font-bold"
+            initial={{ opacity: 0, y: -20 }}  // Start hidden and above
+            animate={{ opacity: 1, y: 0 }}  // Fade in and move down to position
+            transition={{ delay: 0.4, duration: 1 }}
+          >
+            Nikki Mae Evers
+          </motion.h1>
+          
+          <motion.p 
+            className="py-6"
+            initial={{ opacity: 0, y: 50 }}  // Slide in from the bottom
+            animate={{ opacity: 1, y: 0 }}  // Move to the original position
+            transition={{ delay: 0.6, duration: 1.2 }}
+          >
+            A recent Master's graduate in AI with a passion to work on AI and data science projects with a positive impact. I'm especially interested in the intersections of technology with psychology and art, and am always eager to learn new things!
+          </motion.p>
+          
+          <motion.button
+            className="btn btn-accent btn-outline"
+            whileHover={{ scale: 1.1 }}  // Slightly grow on hover
+            whileTap={{ scale: 0.95 }}  // Shrink slightly on click
+            initial={{ opacity: 0, y: 50 }}  // Start hidden below
+            animate={{ opacity: 1, y: 0 }}  // Move to the original position
+            transition={{ delay: 0.8, duration: 1 }}  // Delay so it animates last
+            >
+            Get in touch
+          </motion.button>
+        </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default HeroSection;

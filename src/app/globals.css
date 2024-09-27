@@ -9,6 +9,16 @@ body {
   font-family: 'Inter', sans-serif; /* Example of setting a global font */
 }
 
+#tsparticles {
+  position: absolute; /* Makes sure particles are positioned absolutely */
+  top: 0;
+  left: 0;
+  width: 90vw; /* Full width */
+  height: 100vh; /* Full height */
+  z-index: -1; /* Keeps particles behind other content like the navbar */
+}
+
+
 
 .menu li > *:not(ul):not(.menu-title):not(details):active{
   @apply bg-primary;
@@ -30,4 +40,8 @@ body {
 
 .current-link {
   @apply font-bold text-primary after:absolute after:w-full after:h-0.5 after:bg-primary after:left-0 after:bottom-0 after:scale-x-100;
+}
+
+.even-sections {
+  @apply bg-base-100
 }

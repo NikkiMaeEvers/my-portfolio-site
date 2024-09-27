@@ -1,10 +1,23 @@
 import React from 'react';
+import { motion } from 'framer-motion'; // Import Framer Motion for animations
 
 const ResumeTimeline = () => {
+  // Define a common animation variant for timeline items
+  const timelineVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical text-accent">
       {/* Research Assistant at BLISS */}
-      <li>
+      <motion.li
+        initial="hidden"
+        whileInView="visible"
+        variants={timelineVariant}
+        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+        viewport={{ once: true }}
+      >
         <div className="timeline-middle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,10 +42,16 @@ const ResumeTimeline = () => {
           <p>Radboud University, Nijmegen, the Netherlands</p>
         </div>
         <hr />
-      </li>
+      </motion.li>
 
       {/* Data Science Intern */}
-      <li>
+      <motion.li
+        initial="hidden"
+        whileInView="visible"
+        variants={timelineVariant}
+        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+        viewport={{ once: true }}
+      >
         <hr />
         <div className="timeline-middle">
           <svg
@@ -57,10 +76,16 @@ const ResumeTimeline = () => {
           <p>Deepdesk, Amersfoort, the Netherlands</p>
         </div>
         <hr />
-      </li>
+      </motion.li>
 
       {/* Junior Software Engineer */}
-      <li>
+      <motion.li
+        initial="hidden"
+        whileInView="visible"
+        variants={timelineVariant}
+        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+        viewport={{ once: true }}
+      >
         <hr />
         <div className="timeline-middle">
           <svg
@@ -85,10 +110,16 @@ const ResumeTimeline = () => {
           <p>Keylane, Utrecht, the Netherlands</p>
         </div>
         <hr />
-      </li>
+      </motion.li>
 
-      {/* Teaching Assistant (Advanced) Logic */}
-      <li>
+      {/* Teaching Assistant */}
+      <motion.li
+        initial="hidden"
+        whileInView="visible"
+        variants={timelineVariant}
+        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+        viewport={{ once: true }}
+      >
         <hr />
         <div className="timeline-middle">
           <svg
@@ -113,10 +144,16 @@ const ResumeTimeline = () => {
           <p>Utrecht University, Utrecht, the Netherlands</p>
         </div>
         <hr />
-      </li>
+      </motion.li>
 
       {/* Bootcamp Instructor */}
-      <li>
+      <motion.li
+        initial="hidden"
+        whileInView="visible"
+        variants={timelineVariant}
+        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+        viewport={{ once: true }}
+      >
         <hr />
         <div className="timeline-middle">
           <svg
@@ -140,7 +177,7 @@ const ResumeTimeline = () => {
           </p>
           <p>Startsteps, Berlin, Germany</p>
         </div>
-      </li>
+      </motion.li>
     </ul>
   );
 };
