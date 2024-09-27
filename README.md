@@ -1,5 +1,6 @@
 TODO:
 - Foto aanpassen (te militair nu)
+- nav background kleur zodat ie beter te zien is (particles lager, dan nav bg-base-100)
 - Resume: Titel toevoegen, volgorde verbeteren, alles toevoegen
 - Section voor education: 2 kaarten naast elkaar/ of 3 voor ook exchange; kan je op klikken en dan opent het tot een modal met meer info
 - Section voor projecten met kaarten

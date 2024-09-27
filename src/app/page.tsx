@@ -3,7 +3,6 @@
 import About from "@/components/About";
 import HeroSection from "@/components/HeroSection";
 import ParticlesBackground from "@/components/ParticlesBackground";
-import Contact from "./contact/page";
 import Resume from "@/components/Resume";
 
 
@@ -36,7 +35,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-base-200">
-        <Contact />
+        {/* <Contact /> */}
       </section>
 
       

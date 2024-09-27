@@ -6,7 +6,7 @@ const Navbar = () => {
   const pathname = usePathname(); // Get the current path (App Router compatible)
 
   return (
-    <div className="navbar h-16 justify-between px-6 text-neutral">
+    <div className="navbar sticky top-0 h-16 justify-between px-6 text-neutral">
       {/* Hamburger Menu for Mobile*/}
       <div className="navbar-start">
         <div className="dropdown flex">
@@ -46,13 +46,16 @@ const Navbar = () => {
         <div className='hidden lg:flex'>
           <ul className="flex menu menu-horizontal space-x-4">
             <li>
-            <a href="/" className={`${pathname === '/' ? 'current-link' : 'menu-link'}`}>Home</a>
+            <a href="#hero" className={`${pathname === '#hero' ? 'current-link' : 'menu-link'}`}>Home</a>
             </li>
             <li>
-              <a href="/resume" className={`${pathname === '/resume' ? 'current-link' : 'menu-link'}`}>Resume</a>
+              <a href="#about" className={`${pathname === '#about' ? 'current-link' : 'menu-link'}`}>About Me</a>
             </li>
             <li>
-              <a href="/contact" className={`${pathname === '/contact' ? 'current-link' : 'menu-link'}`}>Contact</a>
+              <a href="#resume" className={`${pathname === '#resume' ? 'current-link' : 'menu-link'}`}>Resume</a>
+            </li>
+            <li>
+              <a href="#contact" className={`${pathname === '#contact' ? 'current-link' : 'menu-link'}`}>Contact</a>
             </li>
           </ul>
         </div>

@@ -9,6 +9,9 @@ body {
   font-family: 'Inter', sans-serif; /* Example of setting a global font */
 }
 
+
+
+
 #tsparticles {
   position: absolute; /* Makes sure particles are positioned absolutely */
   top: 0;
