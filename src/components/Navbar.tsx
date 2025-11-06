@@ -1,5 +1,6 @@
 'use client'; // Declare this as a Client Component
 import { usePathname } from 'next/navigation'; // Use usePathname from next/navigation
+import ParticlesBackground from './ParticlesBackground';
 
 
 const Navbar = () => {
@@ -7,6 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar sticky top-0 h-16 justify-between px-6 text-neutral">
+      {/* <ParticlesBackground /> */}
       {/* Hamburger Menu for Mobile*/}
       <div className="navbar-start">
         <div className="dropdown flex">

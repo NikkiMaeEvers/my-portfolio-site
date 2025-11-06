@@ -52,7 +52,7 @@ const About = () => {
             In my free time, I enjoy organizing storytelling events, bouldering, and working on personal creative projects like sewing, painting, and experimenting with fashion and creative makeup.
           </p>
 
-          <Link href="/resume" className="mt-6 btn btn-primary btn-outline">
+          <Link href="#resume" className="mt-6 btn btn-primary btn-outline">
             View Resume
           </Link>
         </motion.div>

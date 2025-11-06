@@ -1,15 +1,13 @@
 "use client";
 
 import About from "@/components/About";
+import Education from "@/components/Education";
 import HeroSection from "@/components/HeroSection";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import Resume from "@/components/Resume";
 
 
 export default function Home() {
-  
-
-  
   return (
     <div>
       
@@ -33,8 +31,18 @@ export default function Home() {
         <Resume />
       </section>
 
+      {/* Education Section */}
+      <section id="Education" className="py-20 bg-base-200">
+        <Education />
+      </section>
+
+      {/* Projects Section */}
+      <section id="Projects" className="py-20 bg-base-200">
+        {/* <Projects /> */}
+      </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-base-200">
+      <section id="Contact" className="py-20 bg-base-200">
         {/* <Contact /> */}
       </section>
 

@@ -13,131 +13,162 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 
 const ParticlesBackground = () => {
 
-const [init, setInit] = useState(false);
+  const [init, setInit] = useState(false);
 
-    // this should be run only once per application lifetime
-useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
-      await loadSlim(engine);
-      //await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
+      // this should be run only once per application lifetime
+  useEffect(() => {
+      initParticlesEngine(async (engine) => {
+        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        //await loadAll(engine);
+        //await loadFull(engine);
+        await loadSlim(engine);
+        //await loadBasic(engine);
+      }).then(() => {
+        setInit(true);
+      });
+    }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
+    const particlesLoaded = async (container?: Container): Promise<void> => {
+      console.log(container);
+    };
+    
+  //   const options: ISourceOptions = useMemo(
+  //     () => ({
+  //       background: {
+  //         color: {
+  //           value: "#fcf5fc",
+  //         },
+  //       },
+  //       fpsLimit: 120,
+  //       interactivity: {
+  //         events: {
+  //           onClick: {
+  //             enable: true,
+  //             mode: "push",
+  //           },
+  //           onHover: {
+  //             enable: true,
+  //             mode: "repulse",
+  //           },
+  //         },
+  //         modes: {
+  //           push: {
+  //             quantity: 3,
+  //           },
+  //           repulse: {
+  //             distance: 100,
+  //             duration: 0.4,
+  //           },
+  //         },
+  //       },
+  //       particles: {
+  //         color: {
+  //           value: "#601f9e",
+  //         },
+  //         links: {
+  //           color: "#d7aafa",
+  //           distance: 200,
+  //           enable: true,
+  //           opacity: 1,
+  //           width: 1,
+            
+  //         },
+  //         move: {
+  //           direction: MoveDirection.none,
+  //           enable: true,
+  //           outModes: {
+  //             default: OutMode.out,
+  //           },
+  //           random: false,
+  //           speed: 1,
+  //           straight: false,
+  //         },
+  //         number: {
+  //           density: {
+  //             enable: true,
+  //           },
+  //           value: 80,
+  //         },
+  //         opacity: {
+  //           value: 0.5,
+  //         },
+  //         shape: {
+  //           type: "circle",
+  //         },
+  //         size: {
+  //           value: { min: 1, max: 3 },
+  //         },
+  //       },
+  //       detectRetina: true,
+  //     }),
+  //     [],
+  //   );
+
+  const options: ISourceOptions = {
+      background: {
+          color: "#fcf5fc",
+      },
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          push: {
+            quantity: 3,
+          },
+          repulse: {
+            distance: 80,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+          number: {
+              value: 100,
+          },
+          // color: {
+          //   // value: "#601f9e",
+          // },
+
+          color: {
+            value: ["#601f9e"], //, "#d7aafa", "#8007de", "#de07ac"],
+            // animation: {
+            //   enable: true,
+            //   speed: 10,
+            //   sync: false,
+            // }
+          },
+          links: {
+              color: "#d7aafa", //["#000000", "#d7aafa"], random
+              distance: 125,
+              enable: true,
+              //width: 8, //nothing
+              triangles: {
+                  enable: true,
+                  opacity: 0.1,
+              },
+          },
+          move: {
+              enable: true,
+              speed: 1,
+          },
+          size: {
+              value: 2, //1
+          },
+          shape: {
+              type: "circle",
+          },
+      },
   };
-  
-//   const options: ISourceOptions = useMemo(
-//     () => ({
-//       background: {
-//         color: {
-//           value: "#fcf5fc",
-//         },
-//       },
-//       fpsLimit: 120,
-//       interactivity: {
-//         events: {
-//           onClick: {
-//             enable: true,
-//             mode: "push",
-//           },
-//           onHover: {
-//             enable: true,
-//             mode: "repulse",
-//           },
-//         },
-//         modes: {
-//           push: {
-//             quantity: 3,
-//           },
-//           repulse: {
-//             distance: 100,
-//             duration: 0.4,
-//           },
-//         },
-//       },
-//       particles: {
-//         color: {
-//           value: "#601f9e",
-//         },
-//         links: {
-//           color: "#d7aafa",
-//           distance: 200,
-//           enable: true,
-//           opacity: 1,
-//           width: 1,
-          
-//         },
-//         move: {
-//           direction: MoveDirection.none,
-//           enable: true,
-//           outModes: {
-//             default: OutMode.out,
-//           },
-//           random: false,
-//           speed: 1,
-//           straight: false,
-//         },
-//         number: {
-//           density: {
-//             enable: true,
-//           },
-//           value: 80,
-//         },
-//         opacity: {
-//           value: 0.5,
-//         },
-//         shape: {
-//           type: "circle",
-//         },
-//         size: {
-//           value: { min: 1, max: 3 },
-//         },
-//       },
-//       detectRetina: true,
-//     }),
-//     [],
-//   );
-
-const options: ISourceOptions = {
-    background: {
-        color: "#fcf5fc",
-    },
-    particles: {
-        number: {
-            value: 100,
-        },
-        color: {
-            value: "#601f9e",
-        },
-        links: {
-            color: "#d7aafa",
-            distance: 125,
-            enable: true,
-            triangles: {
-                enable: true,
-                opacity: 0.1,
-            },
-        },
-        move: {
-            enable: true,
-            speed: 1,
-        },
-        size: {
-            value: 1,
-        },
-        shape: {
-            type: "circle",
-        },
-    },
-};
 
 
   return(
