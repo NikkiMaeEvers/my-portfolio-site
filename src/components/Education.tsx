@@ -181,12 +181,12 @@ const Education = () => {
                 >
                   📄 Read the paper
                 </a>
-
+                {/* 
                 // TODO: Create a separate page for the publication
                 // TODO: Embed the PDF of the paper using iframe on that page
                 // TODO: Add above-text inspired by LinkedIn post
                 // TODO: Make a button in the modal that links to this publication page
-
+                */}
               </div>
             )}
 
